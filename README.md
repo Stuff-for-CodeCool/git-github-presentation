@@ -119,7 +119,7 @@ To recap:
 7. `git push -u origin <branch name>`
 8. Create a new pull request with a descriptive message
 9. Solve any conflicts
-10. Wait for the repo owner to do this
+10. Wait for the repo owner to merge your changes
 
 ---
 
