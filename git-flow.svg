@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300">
+    <g font-weight="bold" text-anchor="start" font-family="monospace" font-size="12" stroke-width="0" stroke="#000000">
+        <text y="55" x="40" fill="#000000">commit</text>
+        <text y="75" x="20" fill="#007f00">master branch</text>
+        <text y="95" x="20" fill="#ff7f00">feature A branch</text>
+        <text y="115" x="20" fill="#5656ff">feature B branch</text>
+    </g>
+    <g fill="none" stroke-width="4">
+        <path d="m25,170l555,0" stroke="#007f00"/>
+        <path d="m120,167.916581c23.426143,0 24.524913,48.333309 48.333309,48.333309c23.808396,0 143.985008,0 167.499915,0c23.514906,0 23.693556,-47.916642 48.333309,-47.916642" stroke="#5656ff"/>
+        <path d="m193.541724,167.499915c25.003459,0 25.771676,-48.333309 48.333309,-48.333309c22.561632,0 192.85712,0.416666 216.24989,0.416666c23.39277,0 24.163,49.166642 47.916642,49.166642" stroke="#ff7f00"/>
+    </g>
+    <g stroke-width="3" stroke="#000000" fill="#ffffff">
+        <ellipse ry="7.5" rx="7.5" cy="51.26562" cx="26.875142"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="25.208476"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="93.145931"/>
+        <ellipse ry="7.5" rx="7.5" cy="215.432205" cx="194.395877"/>
+        <ellipse ry="7.5" rx="7.5" cy="215.432205" cx="241.897681"/>
+        <ellipse ry="7.5" rx="7.5" cy="215.432205" cx="321.064307"/>
+        <ellipse ry="7.5" rx="7.5" cy="119.811112" cx="265.043197"/>
+        <ellipse ry="7.5" rx="7.5" cy="119.811112" cx="293.985774"/>
+        <ellipse ry="7.5" rx="7.5" cy="119.811112" cx="431.71342"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="121.086738"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="190.284736"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="259.0549"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="385.777148"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="503.28374"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="466.840308"/>
+        <ellipse ry="7.5" rx="7.5" cy="169.182228" cx="574.77703"/>
+    </g>
+</svg>
