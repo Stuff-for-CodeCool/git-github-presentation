@@ -100,7 +100,9 @@ To recap:
 
 ## Contributing to an existing project
 
-Navigate to the project's repo URL and clone it with `git clone <URL>`. Create a new branch with `git checkout -b <new branch name>` and make all required changes. Add the changed files with `git add <list of files>`, commit with the relevant message (`git commit -m "<message>"`), and push the branch (`git push -u origin <branchname>`).
+In CodeCool, most repositories will be automatically created for you. Thus, to work on your project, navigate to the project's repo URL and clone it with `git clone <URL>`. Create a new branch with `git checkout -b <new branch name>` and then get all the content -- you do this using `git pull`.
+
+Proceed to make all required changes. Add the changed files with `git add <list of files>`, commit with the relevant message (`git commit -m "<message>"`), and push the branch (`git push -u origin <branchname>`).
 
 Then, go to the github page of the project, click the "Pull requests" tab, and hit the "New pull request" button. Compare the `base: master` with the `compare: <branch name>` and click "Create pull request". Fill in the details, and click "Create pull request" again.
 
@@ -110,15 +112,14 @@ To recap:
 
 1. `git clone <URL>`
 2. `git checkout -b <new branch name>`
-3. Make the necessary changes
-4. `git add <files>`
-5. `git commit -m "<descriptive message>"`
-6. `git push -u origin <branch name>`
-7. Create a new pull request with a descriptive message
-8. Solve any conflicts
-9. Wait for the repo owner to do this
-
-[Back to top](#git-and-github-basics "to top")
+3. `git pull`
+4. Make the necessary changes
+5. `git add <files>`
+6. `git commit -m "<descriptive message>"`
+7. `git push -u origin <branch name>`
+8. Create a new pull request with a descriptive message
+9. Solve any conflicts
+10. Wait for the repo owner to do this
 
 ---
 
