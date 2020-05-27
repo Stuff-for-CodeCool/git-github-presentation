@@ -12,6 +12,7 @@
   - [`git add`](#git-add)
   - [`git commit`](#git-commit)
   - [`git push`](#git-push)
+  - [`git status`](#git-status)
 
 ---
 
@@ -270,3 +271,29 @@ $ git push
 [Back to top](#git-and-github-basics "to top")
 
 ---
+
+### `git status`
+
+See the status of the files (untracked, new, modified, deleted) on the current branch
+
+```bash
+$ git status
+```
+
+> ```bash
+> On branch master
+> Changes not staged for commit:
+>   (use "git add <file>..." to update what will be committed)
+>   (use "git checkout -- <file>..." to discard changes in working directory)
+>
+> 	modified:   README.md
+>
+> Untracked files:
+>   (use "git add <file>..." to include in what will be committed)
+>
+> 	.gitignore
+>
+> no changes added to commit (use "git add" and/or "git commit -a")
+> ```
+
+[Back to top](#git-and-github-basics "to top")
