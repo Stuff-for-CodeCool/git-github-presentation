@@ -109,14 +109,14 @@ If you see any conflicts, resolve them, otherwise wait for the repo owner to mer
 To recap:
 
 1. `git clone <URL>`
-1. `git checkout -b <new branch name>`
-1. Make the necessary changes
-1. `git add <files>`
-1. `git commit -m "<descriptive message>"`
-1. `git push origin <branch name>`
-1. Create a new pull request with a descriptive message
-1. Solve any conflicts
-1. Wait for the repo owner to do this
+2. `git checkout -b <new branch name>`
+3. Make the necessary changes
+4. `git add <files>`
+5. `git commit -m "<descriptive message>"`
+6. `git push -u origin <branch name>`
+7. Create a new pull request with a descriptive message
+8. Solve any conflicts
+9. Wait for the repo owner to do this
 
 [Back to top](#git-and-github-basics "to top")
 
