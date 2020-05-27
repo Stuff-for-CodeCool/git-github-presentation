@@ -5,7 +5,6 @@
 - [Contributing to an existing project](#contributing-to-an-existing-project)
 - [Commands](#commands)
   - [Setting up](#setting-up)
-  - [`git init`](#git-init)
   - [`git clone`](#git-clone)
   - [`git remote`](#git-remote)
   - [`git checkout`](#git-checkout)
@@ -96,18 +95,6 @@ $ git config --global credential.helper store
 $ git config --global user.name "<github username>"
 $ git config --global user.email "<github email adress>"
 $ git config --global user.password "<github password>"
-```
-
-[Back to top](#git-and-github-basics "to top")
-
----
-
-### `git init`
-
-Create or navigate to the folder where you will work, then initialize git
-
-```bash
-$ git init
 ```
 
 [Back to top](#git-and-github-basics "to top")
