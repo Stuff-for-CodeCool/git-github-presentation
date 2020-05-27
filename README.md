@@ -13,6 +13,16 @@
   - [`git add`](#git-add)
   - [`git commit`](#git-commit)
   - [`git push`](#git-push)
+  - [`git status`](#git-status)
+  - [`git log`](#git-log)
+  - [`git show`](#git-show)
+  - [`git diff`](#git-diff)
+  - [`git fetch`](#git-fetch)
+  - [`git branch`](#git-branch)
+  - [`git pull`](#git-pull)
+  - [`git merge`](#git-merge)
+  - [`git cherry-pick`](#git-cherry-pick)
+  - [`git reset`](#git-reset)
 
 ---
 
@@ -298,3 +308,314 @@ $ git push
 [Back to top](#git-and-github-basics "to top")
 
 ---
+
+### `git status`
+
+See the status of the files (untracked, new, modified, deleted) on the current branch
+
+```bash
+$ git status
+```
+
+> ```bash
+> On branch master
+> Changes not staged for commit:
+>   (use "git add <file>..." to update what will be committed)
+>   (use "git checkout -- <file>..." to discard changes in working directory)
+>
+> 	modified:   README.md
+>
+> Untracked files:
+>   (use "git add <file>..." to include in what will be committed)
+>
+> 	.gitignore
+>
+> no changes added to commit (use "git add" and/or "git commit -a")
+> ```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git log`
+
+For the current branch, it shows the **commit hash**, author's **name** and **email**, the **date** and the **commit message**
+
+```bash
+$ git log
+```
+
+> ```bash
+> commit 56ead357b1a24f791cce3678883f8407a234585f (HEAD -> master)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Feb 25 10:25:07 2020 +0200
+>
+>     Updated Readme
+>
+> commit 21316f2eb86c30402ff5cd4598c910906c1d32ad
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Feb 25 10:22:04 2020 +0200
+>
+>     Added Readme
+> ```
+
+[Back to top](#git-and-github-basics "to top")
+
+
+---
+
+### `git show`
+
+Shows the details of a certain commit
+
+```bash
+$ git show <hash>
+```
+
+> ````diff
+> $ git show 76b66dd4fd566f21a5f1f444a733202418d866f3
+> commit 76b66dd4fd566f21a5f1f444a733202418d866f3 (HEAD -> master)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Feb 25 10:28:53 2020 +0200
+>
+>     Rephrased a line
+>
+> diff --git a/README.md b/README.md
+> index 7612fe6..34ae635 100644
+> --- a/README.md
+> +++ b/README.md
+> @@ -237,7 +237,7 @@ $ git log
+>
+>  ### `git show`
+>
+> -Shows the details of your commit
+> +Shows the details of a certain commit
+>
+>  ```bash
+>  $ git show <hash>
+> ````
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git diff`
+
+When a local file contains changes that do not exist remotely, `diff` will show the differences between versions.
+
+```bash
+$ git diff
+```
+
+```bash
+$ git diff <file>
+```
+
+> ```diff
+> diff --git a/style.css b/style.css
+> index 1bbf05f..33f3834 100644
+> --- a/style.css
+> +++ b/style.css
+> @@ -5,7 +5,5 @@ body {
+> }
+>
+> h1 {
+> -
+> -color:burgundy;
+> -
+> -}
+> \ No newline at end of file
+> +  color: burgundy;
+> +}
+> ```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git fetch`
+
+Gets the content from the remote repository, **without** applying it.
+
+```bash
+$ git fetch
+```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git branch`
+
+See the list of branches on your repository, or create new ones
+
+Used without arguments, it lists the local branches:
+
+```bash
+$ git branch
+```
+
+> ```bash
+>  color
+> * master
+> ```
+
+The **\* asterisk** shows the current branch.
+
+Used with the **-a** argument, it also lists the branches that exist remotely:
+
+```bash
+$ git branch -a
+```
+
+> ```bash
+>  color
+> * master
+>  remotes/origin/HEAD -> origin/master
+>  remotes/origin/color
+>  remotes/origin/master
+> ```
+
+Note the HEAD: it shows that the current branch _for the remote repository_ is the same as the current local branch.
+
+To create a new branch, use
+
+```bash
+$ git branch <new name>
+```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git pull`
+
+Fetches and merges changes from the remote to the specified branch
+
+```bash
+$ git pull origin <name>
+```
+
+> ```bash
+> From https://github.com/alexsincai/git-github-presentation
+> * branch            master     -> FETCH_HEAD
+> Updating 21e40ae..78b5fbd
+> Fast-forward
+> index.html | 2 +-
+> style.css  | 8 ++++++++
+> 2 files changed, 9 insertions(+), 1 deletion(-)
+> ```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git merge`
+
+Incorporates fetched changes into the current branch
+
+```bash
+$ git merge
+```
+
+To incorporate a certain commit, use
+
+```bash
+$ git merge <hash>
+```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git cherry-pick`
+
+So you've made your changes, pushed them, and the you notice that **OH NO! You've pushed to the wrong branch!**
+
+`git cherry-pick` solves this issue; it incorporates a commit on a different branch into the current one.
+
+```bash
+$ git cherry-pick <commit ID>
+```
+
+First get a `git log` to see the exact commit id:
+
+> ```bash
+> commit ce2724ded4afeb6b1b89ece009216f25de477ec8 (HEAD -> master, origin/master, origin/HEAD)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:21:40 2020 +0200
+> 
+>     Beautified code
+> ```
+
+Copy the commit ID, then `git checkout <correct branch>`, and `git cherry-pick <the copied ID>`.
+
+If you run `git log` again on this branch, you will see the new commit:
+
+> ```bash
+> commit 95c6adadda16217de664303c738b3df9c757f7b4 (HEAD -> python)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:21:40 2020 +0200
+> 
+>     Beautified code
+> 
+> commit df9edeac86bac23782cd537cf33e4a99474aef0e (origin/python)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Feb 25 11:38:19 2020 +0200
+> 
+>     Added python files
+> ```
+
+Cool, but the wrong changes still show up. You solve this using the next command.
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git reset`
+
+`git reset` allows you to "go back in time" to just before the error appeared, or rather, to the commit specified.
+
+```bash
+$ git reset <commit ID>
+```
+
+```bash
+$ git reset --hard <commit ID>
+```
+
+```bash
+$ git reset --soft <commit ID>
+```
+
+A reset can be *soft*, *mixed* (this is the default), or *hard*. A soft reset adds and commits the changes made for the specified commit; a mixed reset adds the changed files, but does not change them; a hard reset removes all the changes.
+
+> ```bash
+> commit ce2724ded4afeb6b1b89ece009216f25de477ec8 (origin/master, origin/HEAD)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:21:40 2020 +0200
+> 
+>     Beautified code
+> 
+> commit 679e7b6d41a0625d5d8ea9366caca3e3da2ca944
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:00:21 2020 +0200
+> 
+>     URL didn't work
+>
+> $ git reset --hard 679e7b6d41a0625d5d8ea9366caca3e3da2ca944
+> Unstaged changes after reset:
+> M	area_of_circle.py
+> 
+> $ git log
+> commit 679e7b6d41a0625d5d8ea9366caca3e3da2ca944 (HEAD -> master)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:00:21 2020 +0200
+> 
+>     URL didn't work
+> ```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
