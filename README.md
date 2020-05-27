@@ -2,7 +2,6 @@
 
 - [Introduction](#introduction)
 - [Preamble](#preamble)
-- [Creating a new project](#creating-a-new-project)
 - [Contributing to an existing project](#contributing-to-an-existing-project)
 - [Commands](#commands)
   - [Setting up](#setting-up)
@@ -58,39 +57,11 @@ The sample output of a command will show up like this:
 
 ---
 
-## Creating a new project
-
-Let's start by creating a new project. Create a new folder and add some content.
-
-Before starting any actual work, start by initializing `git` in the current folder; you do this by running `git init` in the terminal. Then, create your first commit, by running `git add .` followed by `git commit -m "First commit"`.
-
-This will track all files in the current folder.
-
-Then, create a remote repository, by navigating to your github page and [creating a new repository](https://github.com/new). Give it a name, a description, and click "Create".
-
-Once you have the repository, go to your folder and connect it to the remote repository; you do this by running `git remote add origin <repo URL>`.
-
-Finally, run `git push -u origin master` to send the files from your *local* repository to the *remote* repository.
-
-To recap:
-
-1. Navigate to your folder
-2. `git init`
-3. Modify / add files
-4. `git add <all relevant files>`
-5. `git commit -m "Commit message"`
-6. Create a repo on github
-7. `git remote add origin <repo URL>`
-8. `git push -u origin master`
-9. Repeat steps 3, 4, 5, 8 as needed
-
-[Back to top](#git-and-github-basics "to top")
-
----
-
 ## Contributing to an existing project
 
-Navigate to the project's repo URL and clone it with `git clone <URL>`. Create a new branch with `git checkout -b <new branch name>` and make all required changes. Add the changed files with `git add <list of files>`, commit with the relevant message (`git commit -m "<message>"`), and push the branch (`git push -u origin <branchname>`).
+In CodeCool, most repositories will be automatically created for you. Thus, to work on your project, navigate to the project's repo URL and clone it with `git clone <URL>`. Create a new branch with `git checkout -b <new branch name>` and then get all the content -- you do this using `git pull`.
+
+Proceed to make all required changes. Add the changed files with `git add <list of files>`, commit with the relevant message (`git commit -m "<message>"`), and push the branch (`git push -u origin <branchname>`).
 
 Then, go to the github page of the project, click the "Pull requests" tab, and hit the "New pull request" button. Compare the `base: master` with the `compare: <branch name>` and click "Create pull request". Fill in the details, and click "Create pull request" again.
 
@@ -100,13 +71,14 @@ To recap:
 
 1. `git clone <URL>`
 2. `git checkout -b <new branch name>`
-3. Make the necessary changes
-4. `git add <files>`
-5. `git commit -m "<descriptive message>"`
-6. `git push -u origin <branch name>`
-7. Create a new pull request with a descriptive message
-8. Solve any conflicts
-9. Wait for the repo owner to do this
+3. `git pull`
+4. Make the necessary changes
+5. `git add <files>`
+6. `git commit -m "<descriptive message>"`
+7. `git push -u origin <branch name>`
+8. Create a new pull request with a descriptive message
+9. Solve any conflicts
+10. Wait for the repo owner to do this
 
 [Back to top](#git-and-github-basics "to top")
 
