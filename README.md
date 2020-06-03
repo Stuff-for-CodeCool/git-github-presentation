@@ -1,6 +1,8 @@
 # git and Github basics
 
 - [Introduction](#introduction)
+- [Installation](#installation)
+- [Please note that you will have to provide your system password for `sudo` commands.](#please-note-that-you-will-have-to-provide-your-system-password-for-sudo-commands)
 - [Preamble](#preamble)
 - [Contributing to an existing project](#contributing-to-an-existing-project)
 - [Commands](#commands)
@@ -28,6 +30,20 @@ Every change, or **commit**, has a unique ID (or **hash**) linked to its parent.
 ![Git flow](./git-flow.svg)
 
 ---
+
+## Installation
+
+On Ubuntu systems, you will need to install `git` by running these commands in a terminal:
+
+```sh
+$ sudo apt-get update
+$ sudo apt-get install git-all
+```
+
+This will make sure you have the latest sources for the software to be installed, and then install `git` for your system, if it's not already present.
+
+Please note that you will have to provide your system password for `sudo` commands.
+--
 
 ## Preamble
 
