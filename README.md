@@ -1,6 +1,7 @@
 # git and Github basics
 
 - [Introduction](#introduction)
+- [Installation](#installation)
 - [Preamble](#preamble)
 - [Creating a new project](#creating-a-new-project)
 - [Contributing to an existing project](#contributing-to-an-existing-project)
@@ -37,6 +38,21 @@ Every change, or **commit**, has a unique ID (or **hash**) linked to its parent.
 **[github.com](https://github.com/)** is **not** `git`; it is simply a convenient website to backup and share your repositories, via the `git` protocol.
 
 ![Git flow](./git-flow.svg)
+
+---
+
+## Installation
+
+At this point you should have `git` already installed. If for whatever reason you do not, you will need to install `git` by running these commands in a terminal:
+
+```sh
+$ sudo apt-get update
+$ sudo apt-get install git-all
+```
+
+This will make sure you have the latest sources for the software to be installed, and then install `git` for your system, if it's not already present.
+
+Please note that you will have to provide your system password for `sudo` commands.
 
 ---
 
