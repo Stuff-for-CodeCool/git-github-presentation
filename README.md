@@ -7,12 +7,13 @@
 - [Commands](#commands)
   - [Setting up](#setting-up)
   - [`git clone`](#git-clone)
-  - [`git remote`](#git-remote)
   - [`git checkout`](#git-checkout)
   - [`git add`](#git-add)
   - [`git commit`](#git-commit)
   - [`git push`](#git-push)
   - [`git status`](#git-status)
+  - [`git merge`](#git-merge)
+  - [`git reset`](#git-reset)
 
 ---
 
@@ -133,20 +134,6 @@ $ git clone <remote repository> [<local folder>]
 > remote: Total 37 (delta 11), reused 33 (delta 7), pack-reused 0
 > Unpacking objects: 100% (37/37), done.
 > ```
-
-[Back to top](#git-and-github-basics "to top")
-
----
-
-### `git remote`
-
-Lets the local repository know about the remote repository
-
-```bash
-$ git remote add origin <URL>
-```
-
-As stated above, the name of the remote can be something other than **origin**, but it is that by convention; changing this will cause headaches down the road.
 
 [Back to top](#git-and-github-basics "to top")
 
@@ -297,6 +284,71 @@ $ git status
 > 	.gitignore
 >
 > no changes added to commit (use "git add" and/or "git commit -a")
+> ```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git merge`
+
+Incorporates fetched changes into the current branch
+
+```bash
+$ git merge
+```
+
+To incorporate a certain commit, use
+
+```bash
+$ git merge <hash>
+```
+
+[Back to top](#git-and-github-basics "to top")
+
+---
+
+### `git reset`
+
+`git reset` allows you to "go back in time" to just before the error appeared, or rather, to the commit specified.
+
+```bash
+$ git reset <commit ID>
+```
+
+```bash
+$ git reset --hard <commit ID>
+```
+
+```bash
+$ git reset --soft <commit ID>
+```
+
+A reset can be *soft*, *mixed* (this is the default), or *hard*. A soft reset adds and commits the changes made for the specified commit; a mixed reset adds the changed files, but does not change them; a hard reset removes all the changes.
+
+> ```bash
+> commit ce2724ded4afeb6b1b89ece009216f25de477ec8 (origin/master, origin/HEAD)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:21:40 2020 +0200
+> 
+>     Beautified code
+> 
+> commit 679e7b6d41a0625d5d8ea9366caca3e3da2ca944
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:00:21 2020 +0200
+> 
+>     URL didn't work
+>
+> $ git reset --hard 679e7b6d41a0625d5d8ea9366caca3e3da2ca944
+> Unstaged changes after reset:
+> M	area_of_circle.py
+> 
+> $ git log
+> commit 679e7b6d41a0625d5d8ea9366caca3e3da2ca944 (HEAD -> master)
+> Author: alexsincai <alex.sincai@yahoo.co.uk>
+> Date:   Tue Mar 3 10:00:21 2020 +0200
+> 
+>     URL didn't work
 > ```
 
 [Back to top](#git-and-github-basics "to top")
