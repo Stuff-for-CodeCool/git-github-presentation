@@ -152,6 +152,7 @@ $ git config --global credential.helper store
 $ git config --global user.name "<github username>"
 $ git config --global user.email "<github email adress>"
 $ git config --global user.password "<github password>"
+$ git config --global pull.rebase false
 ```
 
 [Back to top](#git-and-github-basics "to top")
