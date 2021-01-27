@@ -179,6 +179,8 @@ Allows you to clone a remote repository to your machine.
 $ git clone <remote repository> [<local folder>]
 ```
 
+Should there be several remotes (`git remote -v`), you can specify which non-origin remote you want to clone, otherwise "origin" will be used.
+
 > ```bash
 > Cloning into 'git-github-presentation'...
 > remote: Enumerating objects: 37, done.
@@ -201,6 +203,21 @@ $ git remote add origin <URL>
 ```
 
 As stated above, the name of the remote can be something other than **origin**, but it is that by convention; changing this will cause headaches down the road.
+
+This command also allows one to set *several* remotes, for any number of reasons, most commonly to separate development and deployment servers.
+
+To check if there are several remotes, use:
+
+```bash
+$ git remote -v
+```
+To add a new remote:
+
+```bash
+$ git remote add <new remote name> <new URL> 
+```
+
+**When cloning from a non-origin remote, please specify this remote's name!**
 
 [Back to top](#git-and-github-basics "to top")
 
