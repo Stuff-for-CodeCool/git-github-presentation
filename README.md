@@ -1,29 +1,23 @@
 # git and Github basics
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Preamble](#preamble)
-- [Creating a new project](#creating-a-new-project)
-- [Contributing to an existing project](#contributing-to-an-existing-project)
-- [Commands](#commands)
-  - [Setting up](#setting-up)
-  - [`git init`](#git-init)
-  - [`git clone`](#git-clone)
-  - [`git remote`](#git-remote)
-  - [`git checkout`](#git-checkout)
-  - [`git add`](#git-add)
-  - [`git commit`](#git-commit)
-  - [`git push`](#git-push)
-  - [`git status`](#git-status)
-  - [`git log`](#git-log)
-  - [`git show`](#git-show)
-  - [`git diff`](#git-diff)
-  - [`git fetch`](#git-fetch)
-  - [`git branch`](#git-branch)
-  - [`git pull`](#git-pull)
-  - [`git merge`](#git-merge)
-  - [`git cherry-pick`](#git-cherry-pick)
-  - [`git reset`](#git-reset)
+- [Setting up](#setting-up)
+- [`git init`](#git-init)
+- [`git clone`](#git-clone)
+- [`git remote`](#git-remote)
+- [`git checkout`](#git-checkout)
+- [`git add`](#git-add)
+- [`git commit`](#git-commit)
+- [`git push`](#git-push)
+- [`git status`](#git-status)
+- [`git log`](#git-log)
+- [`git show`](#git-show)
+- [`git diff`](#git-diff)
+- [`git fetch`](#git-fetch)
+- [`git branch`](#git-branch)
+- [`git pull`](#git-pull)
+- [`git merge`](#git-merge)
+- [`git cherry-pick`](#git-cherry-pick)
+- [`git reset`](#git-reset)
 
 ---
 
@@ -145,15 +139,17 @@ To recap:
 
 ### Setting up
 
-`git` (and github) needs to know about you. Run these commands to configure it:
+`git` (and github) needs to know about you. Unfortunately, this is a rather more complex process than it used to be.
 
-```bash
-$ git config --global credential.helper store
-$ git config --global user.name "<github username>"
-$ git config --global user.email "<github email adress>"
-$ git config --global user.password "<github password>"
-$ git config --global pull.rebase false
-```
+First, you will need to set up **2FA** (Two-Factor Authentication). For that, you will need a smartphone on which you must install [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US). This will generate a new access token every time you open the app.
+
+Then, go to your github settings page, and under Developer settings, select [Personal access tokens](https://github.com/settings/tokens), and click on the **New access token** button on the right side. When prompted, check **repo**, **admin:repo_hook** and **delete_repo**, then cick the green **Generate token** button. This will provide a new access token.
+
+> ## Save this token somewhere safe, where you can recover it later
+
+Next to the field where you get the token, you will see a drop-down labelled **Enable SSO**. Make sude you select "Enable SSO", and select *github* as the authorized organisation.
+
+Once you've done this, go to [this page](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git) and follow the instructions for your operating system.
 
 [Back to top](#git-and-github-basics "to top")
 
