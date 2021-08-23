@@ -110,8 +110,6 @@ Then, go to your github settings page, and under Developer settings, select [Per
 
 > ## Save this token somewhere safe, where you can recover it later
 
-Next to the field where you get the token, you will see a drop-down labelled **Enable SSO**. Make sude you select "Enable SSO", and select *github* as the authorized organisation.
-
 Once you've done this, go to [this page](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git) and follow the instructions for your operating system.
 
 [Back to top](#git-and-github-basics "to top")
