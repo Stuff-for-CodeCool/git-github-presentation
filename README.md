@@ -1,4 +1,4 @@
-# git and Github basics
+# GIT and Github basics
 
 - [Setting up](#setting-up)
 - [`git clone`](#git-clone)
