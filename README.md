@@ -14,6 +14,10 @@
 
 ## Introduction
 
+Primul paragraf de text.
+
+Si inca un paragraf.
+
 ![xkcd knows](https://imgs.xkcd.com/comics/git.png)
 
 `git` is a **system to keep track of changes** across a set of files in a folder on your computer. It lives in a hidden folder called `.git` and it keeps track of all changes specified, as you work.
